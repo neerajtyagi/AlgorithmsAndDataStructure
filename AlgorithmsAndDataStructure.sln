@@ -13,6 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SubArray_With_Given_Sum", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem_SubArrayWithGivenSum", "Problem_SubArrayWithGivenSum\Problem_SubArrayWithGivenSum.csproj", "{78AE0005-B4FE-4F88-9F80-C5B773074ADE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tower_Of_Hanoi", "Tower_Of_Hanoi", "{10DC6773-B64B-4F0E-BE3A-88F6FD1EDCFC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problem_TowerOfHanoi", "Problem_TowerOfHanoi\Problem_TowerOfHanoi.csproj", "{777C44FA-9331-4A7E-ADE2-052A6723E885}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,10 @@ Global
 		{78AE0005-B4FE-4F88-9F80-C5B773074ADE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78AE0005-B4FE-4F88-9F80-C5B773074ADE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78AE0005-B4FE-4F88-9F80-C5B773074ADE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777C44FA-9331-4A7E-ADE2-052A6723E885}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777C44FA-9331-4A7E-ADE2-052A6723E885}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777C44FA-9331-4A7E-ADE2-052A6723E885}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777C44FA-9331-4A7E-ADE2-052A6723E885}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,6 +38,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{7EA65615-0D2C-4169-B097-ADF955BE925F} = {8B162E1A-53FE-47E1-82C8-C8648C7BA018}
 		{78AE0005-B4FE-4F88-9F80-C5B773074ADE} = {7EA65615-0D2C-4169-B097-ADF955BE925F}
+		{10DC6773-B64B-4F0E-BE3A-88F6FD1EDCFC} = {8B162E1A-53FE-47E1-82C8-C8648C7BA018}
+		{777C44FA-9331-4A7E-ADE2-052A6723E885} = {10DC6773-B64B-4F0E-BE3A-88F6FD1EDCFC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {69037E33-B44A-459B-A739-9C84218B6F63}
