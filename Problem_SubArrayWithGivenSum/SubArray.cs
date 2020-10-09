@@ -48,10 +48,12 @@ namespace Problem_SubArrayWithGivenSum
 
             if (sum == ArraySum)
             {
+                Console.WriteLine("<Start Position> <End Position>: ");
                 Console.WriteLine("{0} {1}", startIndex + 1, currentIndex);
             }
             else
             {
+                Console.WriteLine("No match found");
                 Console.WriteLine("-1");
             }
         }
