@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-namespace Subarray_With_Given_Sum
+namespace Problem_SubArrayWithGivenSum
 {
     public class SubArray
     {
@@ -36,7 +38,7 @@ namespace Subarray_With_Given_Sum
                     currentIndex++;
                 }
 
-                if(sum == ArraySum)
+                if (sum == ArraySum)
                 {
                     break;
                 }
