@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Problem_SubArrayWithGivenSum
+namespace Prob_SubArrayWithGivenSum
 {
     class Program
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Problem_TowerOfHanoi
+namespace Prob_TowerOfHanoi
 {
     class Program
     {

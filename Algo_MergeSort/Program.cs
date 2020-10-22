@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Algo_MergeSort
 {
-	class Program
-	{
-		static void Main(string[] args)
+    class Program
+    {
+        static void Main(string[] args)
 		{
 			int[] input = { 5, 2, 4, 9, 7, 1, 3, 2, 6 };
 			PrintArray(input);
@@ -88,5 +88,5 @@ namespace Algo_MergeSort
 
 			PrintArray(arr);
 		}
-	}
+    }
 }
