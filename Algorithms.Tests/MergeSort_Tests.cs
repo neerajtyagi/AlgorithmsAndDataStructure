@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Algorithms;
 
-namespace Algoritmhs.Tests
+namespace Algorithms.Tests
 {
     public class MergeSort_Tests
     {
