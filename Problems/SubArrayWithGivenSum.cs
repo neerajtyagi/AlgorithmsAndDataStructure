@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Problems
 {
-    public class Class1
+    public class SubArrayWithGivenSum
     {
         static void Main(string[] args)
         {
