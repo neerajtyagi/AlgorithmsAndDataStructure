@@ -4,38 +4,78 @@ namespace DataStructure
 {
     public class SinglyLinkList<T>
     {
-        public SinglyLinkList<T> Next {get; set;}
+        SingleNode<T> head;
 
-        public T Value {get; set;}
-
-        public bool AddFirst(T data)
+        public void Push(T data)
         {
-            throw new NotImplementedException("Not yet implemented");
+            SingleNode<T> newNode = head == null ? new() { Data = data } : new() { Data = data, Next = head };
+            head = newNode;
         }
 
-        public bool AddLast(T data)
+        public void Append(T data)
         {
-            throw new NotImplementedException("Not yet implemented");
+            if (head == null)
+            {
+                SingleNode<T> newNode = new() { Data = data };
+                head = newNode;
+            }
+            else
+            {
+                SingleNode<T> newNode = new() { Data = data };
+                Tail().Next = newNode;
+            }
         }
 
-        public T GetFirst()
+        public SingleNode<T> Tail()
         {
-            throw new NotImplementedException("Not yet implemented");
+            if (head == null)
+            {
+                return null;
+            }
+            else
+            {
+                var currentNode = head;
+                while (currentNode.Next != null)
+                {
+                    currentNode = currentNode.Next;
+                }
+
+                return currentNode;
+            }
         }
 
-        public T GetLast()
+        public SingleNode<T> RemoveTail()
         {
-            throw new NotImplementedException("Not yet implemented");
-        }
+            if (head == null)
+            {
+                return null;
+            }
+            else if (head.Next == null)
+            {
+                var nodeToRemove = head;
+                head = null;
+                return nodeToRemove;
+            }
+            else
+            {
+                var previousNode = head;
+                var currentNode = head.Next;
+                while (currentNode.Next != null)
+                {
+                    previousNode = currentNode;
+                    currentNode = currentNode.Next;
+                }
 
-        public T RemoveFirst()
-        {
-            throw new NotImplementedException("Not yet implemented");
+                previousNode.Next = null;
+                return currentNode;
+            }
         }
+    }
 
-        public T RemoveLast()
-        {
-            throw new NotImplementedException("Not yet implemented");
-        }
+    public class SingleNode<T>
+    {
+        public SingleNode<T> Next { get; set; }
+
+        public T Data { get; set; }
     }
 }

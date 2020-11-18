@@ -4,11 +4,7 @@ namespace DataStructure
 {
     public class DoublyLinkList<T>
     {
-        public DoublyLinkList<T> Next { get; set; }
-
-        public DoublyLinkList<T> Previous { get; set; }
-
-        public T Value { get; set; }
+        DoubleNode<T> head, tail;
 
         public bool AddFirst(T data)
         {
@@ -39,5 +35,13 @@ namespace DataStructure
         {
             throw new NotImplementedException("Not yet implemented");
         }
+    }
+
+    public class DoubleNode<T>
+    {
+        public DoubleNode<T> Next { get; set; }
+
+        public DoubleNode<T> Previous { get; set; }
+        public T Data { get; set; }
     }
 }

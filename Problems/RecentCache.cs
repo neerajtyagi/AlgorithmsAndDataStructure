@@ -37,12 +37,21 @@ namespace Problems
         }
     }
 
+    public class CacheNode<T>
+    {
+        public CacheNode<T> Next { get; set; }
+
+        public CacheNode<T> Previous { get; set; }
+
+        public T Data { get; set; }
+    }
+
     public class Cache
     {
         private readonly int cacheSize;
-        Dictionary<int, DoublyLinkList<UserData>> cachedItems = new Dictionary<int, DoublyLinkList<UserData>>();
-        DoublyLinkList<UserData> nodeHead = null;
-        DoublyLinkList<UserData> nodeTail = null;
+        Dictionary<int, CacheNode<UserData>> cachedItems = new Dictionary<int, CacheNode<UserData>>();
+        CacheNode<UserData> nodeHead = null;
+        CacheNode<UserData> nodeTail = null;
 
         public Cache(int cacheSize)
         {
@@ -57,10 +66,10 @@ namespace Problems
                 return string.Empty;
             }
 
-            DoublyLinkList<UserData> currentNode = nodeHead;
+            CacheNode<UserData> currentNode = nodeHead;
             do
             {
-                data += $"{nodeHead.Value.UserID}->";
+                data += $"{nodeHead.Data.UserID}->";
             } while (currentNode.Next == null);
 
             return data;
@@ -93,7 +102,7 @@ namespace Problems
 
         private void MoveToTop(int userID)
         {
-            DoublyLinkList<UserData> node = cachedItems[userID];
+            CacheNode<UserData> node = cachedItems[userID];
 
             // Head node so don't need to move further
             if (node.Previous == null)
@@ -127,9 +136,9 @@ namespace Problems
 
         private void AddToCache(UserData data)
         {
-            DoublyLinkList<UserData> newNode = new DoublyLinkList<UserData>
+            CacheNode<UserData> newNode = new CacheNode<UserData>
             {
-                Value = data
+                Data = data
             };
 
             cachedItems[data.UserID] = newNode;
@@ -154,16 +163,16 @@ namespace Problems
                 // Having previous node
                 if (nodeTail.Previous != null)
                 {
-                    DoublyLinkList<UserData> previousNode = nodeHead.Previous;
+                    CacheNode<UserData> previousNode = nodeHead.Previous;
                     previousNode.Next = null;
                     nodeTail.Previous = null;
-                    cachedItems.Remove(nodeTail.Value.UserID);
+                    cachedItems.Remove(nodeTail.Data.UserID);
                     nodeTail = previousNode;
                 }
                 // Tail node and Head node is same
                 else
                 {
-                    cachedItems.Remove(nodeTail.Value.UserID);
+                    cachedItems.Remove(nodeTail.Data.UserID);
                     nodeTail = null;
                     nodeHead = null;
                 }
