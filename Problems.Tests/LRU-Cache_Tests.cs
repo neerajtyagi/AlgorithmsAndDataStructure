@@ -3,11 +3,11 @@ using Xunit;
 
 namespace Problems.Tests
 {
-    public class RecentCache_Tests
+    public class LRUCache_Tests
     {
         private readonly Storage storage;
 
-        public RecentCache_Tests()
+        public LRUCache_Tests()
         {
             storage = new Storage()
             {

@@ -1,4 +1,4 @@
-## Problem: **Recent cache of fixed length with O(1)**
+## Problem: **LRU - Least recently used replacement cache with of fixed length with O(1)**
 
 Cache of fixed lenght should be maintained with below condition statements.
 

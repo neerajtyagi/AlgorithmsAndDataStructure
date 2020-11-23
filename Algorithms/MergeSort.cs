@@ -3,15 +3,15 @@ using System.Linq;
 
 namespace Algorithms
 {
-    public class MergeSort<T> where T : IComparable
+    public class MergeSort
     {
-        public static T[] Sort(T[] input)
+        public static int[] Sort(int[] input)
         {
             Split(input, 0, input.Count() - 1);
             return input;
         }
 
-        private static void Split(T[] arr, int startIndex, int endIndex)
+        private static void Split(int[] arr, int startIndex, int endIndex)
         {
             if (startIndex < endIndex)
             {
@@ -22,13 +22,13 @@ namespace Algorithms
             }
         }
 
-        private static void Merge(T[] arr, int startIndex, int midIndex, int endIndex)
+        private static void Merge(int[] arr, int startIndex, int midIndex, int endIndex)
         {
             int leftArrayLength = midIndex - startIndex + 1;
             int rightArrayLength = endIndex - midIndex;
 
-            T[] leftArray = new T[leftArrayLength];
-            T[] rightArray = new T[rightArrayLength];
+            int[] leftArray = new int[leftArrayLength];
+            int[] rightArray = new int[rightArrayLength];
 
             // Copy left array into new Array
             for (int iLeftArray = 0; iLeftArray < leftArrayLength; iLeftArray++)
@@ -49,7 +49,7 @@ namespace Algorithms
             while (leftIterator < leftArrayLength && rightIterator < rightArrayLength)
             {
                 // check if leftArray[leftIterator] <= rightArray[rightIterator]
-                if (leftArray[leftIterator].CompareTo(rightArray[rightIterator]) <= 0)
+                if (leftArray[leftIterator] <= rightArray[rightIterator])
                 {
                     arr[mergedIterator] = leftArray[leftIterator];
                     leftIterator++;

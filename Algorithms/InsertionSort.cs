@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 namespace Algorithms
 {
-    public class InsertionSort<T> where T : IComparable
+    public class InsertionSort
     {
-        public static T[] Sort(T[] input)
+        public static int[] Sort(int[] input)
         {
             for (int j = 1; j < input.Count(); j++)
             {
-                T key = input[j];
+                int key = input[j];
                 Console.WriteLine(key);
                 int i = j - 1;
 
                 // check if input[i] > key
-                while (i >= 0 && input[i].CompareTo(key) > 0)
+                while (i >= 0 && input[i] > key)
                 {
                     input[i + 1] = input[i];
                     i = i - 1;

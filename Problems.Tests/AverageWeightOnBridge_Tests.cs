@@ -1,7 +1,7 @@
 using System;
 using Xunit;
 
-namespace Problems_Tests
+namespace Problems.Tests
 {
     public class AverageWeightOnBridge_Tests
     {

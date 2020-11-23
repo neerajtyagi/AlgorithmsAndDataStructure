@@ -4,12 +4,12 @@ using DataStructure;
 
 namespace Problems
 {
-    public class RecentCache
+    public class LRUCache
     {
         private readonly Cache cache;
         private readonly Storage storage;
 
-        public RecentCache(int cacheSize, Storage storageInstance)
+        public LRUCache(int cacheSize, Storage storageInstance)
         {
             this.cache = new Cache(cacheSize);
             this.storage = storageInstance;
@@ -21,16 +21,9 @@ namespace Problems
 
             if (string.IsNullOrEmpty(userName))
             {
-                if (this.storage.ContainsKey(userID))
-                {
-                    UserData userData = this.storage[userID];
-                    this.cache.Add(userData);
-                    return userData.UserName;
-                }
-                else
-                {
-                    return "Not found";
-                }
+                UserData userData = this.storage[userID];
+                this.cache.Add(userData);
+                return userData.UserName;
             }
 
             return userName;

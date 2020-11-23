@@ -2,7 +2,7 @@ using System;
 using Problems;
 using Xunit;
 
-namespace Problems_Tests
+namespace Problems.Tests
 {
     public class ConcatenatedStringLenthWithUniqueCharacter_Tests
     {
